@@ -1,4 +1,5 @@
 
+
 function startTimer(button){
 
     //initial count vars
@@ -72,7 +73,7 @@ function startTimer(button){
         }// end if
     }, 10 );//end interval
 
-}//end func
+}//end startTimer func
 
 window.onload= function(){
     //create start button
@@ -94,6 +95,15 @@ window.onload= function(){
     //create reset button
     const button2= document.createElement('button');
     button2.textContent= 'Reset';
+
+    //click event
+    button2.addEventListener('click', (event) => {
+        this.clearInterval(interval);
+        // msTens.textContent= msTenmsTens.textContent= msTensCount;
+        // msHundreds.textContent= msHundredsCount;
+        // secondOnes.textContent= secondsOnesCount;
+        // secondTens.textContent= secondsTensCount;condsTensCount;
+    });
 
     body.append(button2);
 
