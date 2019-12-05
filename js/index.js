@@ -184,3 +184,10 @@ topContent.style.padding= '20px';
 
 document.querySelector('.main-content').style.borderTop= '1px solid #ddd';
 document.querySelector('.main-content').style.borderBottom= '1px solid #ddd';
+
+// ////////////// events (stretch)
+
+button.addEventListener('click', (event) => {
+  mainHeading.textContent= 'Events are GREAT!';
+  mainHeading.style.color= 'dodgerblue';
+} );
