@@ -4,9 +4,6 @@ let secondsOnesCount= 0;
 let secondsTensCount= 0;
 
 const interval= window.setInterval( function(){
-    
-    const max= 10;
-    
     //get msTens
     const msTens= document.querySelector('#msTens');
 
@@ -19,6 +16,7 @@ const interval= window.setInterval( function(){
     //get secondsTens
     const secondsTens= document.querySelector('#secondsTens');
 
+    //get digits as a nodeList
     const getDigits= document.querySelectorAll('.digit');
 
     // set initial '0' for all
@@ -27,30 +25,29 @@ const interval= window.setInterval( function(){
     secondOnes.textContent= secondsOnesCount;
     secondTens.textContent= secondsTensCount;
 
-
+    //start incrementing from smallest digit up
     msTens.textContent= msTensCount;
     msTensCount++;
     
-    if(msTensCount > 9){
-
+    if(msTensCount > 9){ // increment msHundreds when tens > 9
         msHundreds.textContent= msHundredsCount;
         msHundredsCount ++;
         msTensCount= 0;
     }//end if msTens
         
-    if( msHundredsCount > 9 ){
+    if( msHundredsCount > 9 ){ //increment secondOnes when msHundreds > 9
         msHundredsCount= 0;
         secondOnes.textContent= secondsOnesCount;
         secondsOnesCount++;
     }//end if msHundreds
 
-    if( secondsOnesCount > 9 ){
+    if( secondsOnesCount > 9 ){ //increment secondTens when secondOnes > 9
         secondTens.textContent= secondsTensCount;
         secondsOnesCount= 0;
         secondsTensCount++;
     }// end if
 
-    if( secondsTensCount ===1 ){
+    if( secondsTensCount ===1 ){ //when 10 sec, update all digits, stop timer, change color
         msTens.textContent= msTensCount;
         msHundreds.textContent= msHundredsCount;
         secondOnes.textContent= secondsOnesCount;
