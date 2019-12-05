@@ -1,4 +1,4 @@
-function startTimer(){
+// function startTimer(){
 
     //initial count vars
     let msTensCount= 0;
@@ -65,12 +65,14 @@ function startTimer(){
         }// end if
     }, 10 );//end interval
 
-}//end func
+// }//end func
 
 
-//get button
-const startBtn= document.querySelector('.button');
+// //get button
+// const startBtn= document.getElementById('button');
 
-startBtn.addEventListener('click', (event) =>{
-    alert('working');
-} );
+// console.dir(startBtn);
+
+// startBtn.addEventListener('click', (event) =>{
+
+// } );
