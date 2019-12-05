@@ -75,17 +75,28 @@ function startTimer(button){
 }//end func
 
 window.onload= function(){
-    //create button
+    //create start button
     const button= document.createElement('button');
     button.textContent= 'Start';
+
+    //click event
     button.addEventListener('click', (event) => {
         startTimer(button);
         button.disabled= true;
     });
 
+    //add button to DOM
     const body= document.querySelector('body');
-
     body.append(button);
-}
+
+    // ////////////////////////////////////////////////
+
+    //create reset button
+    const button2= document.createElement('button');
+    button2.textContent= 'Reset';
+
+    body.append(button2);
+
+}//end onload
 
 
