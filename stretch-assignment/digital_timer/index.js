@@ -1,3 +1,4 @@
+
 // function startTimer(){
 
     //initial count vars
@@ -50,12 +51,12 @@
             secondsTensCount++;
         }// end if
 
-        if( secondsTensCount ===1 ){ //when 10 sec, update all digits, stop timer, change color
+        if( secondsTensCount === 1 ){ //when 10 sec, update all digits, stop timer, change color
             msTens.textContent= msTensCount;
             msHundreds.textContent= msHundredsCount;
             secondOnes.textContent= secondsOnesCount;
             secondTens.textContent= secondsTensCount;
-            clearInterval(interval);//stop timer
+            clearInterval(interval); //stop timer
 
             //change digit color 'nodeList'
             for(let i=0; i < getDigits.length; i++){
@@ -67,12 +68,14 @@
 
 // }//end func
 
+window.onload= function(){
+    //create button
+    const button= document.createElement('button');
+    button.textContent= 'Start';
 
-// //get button
-// const startBtn= document.getElementById('button');
+    const body= document.querySelector('body');
 
-// console.dir(startBtn);
+    body.append(button);
+}
 
-// startBtn.addEventListener('click', (event) =>{
 
-// } );
